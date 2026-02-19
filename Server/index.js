@@ -1516,7 +1516,10 @@ int main() {
     res.send(result);
 });
 
-server.listen(3001, () => {
-    console.log("Server running on http://localhost:3001");
-    console.log("PeerJS server running on http://localhost:3001/peerjs");
+
+
+const PORT = process.env.PORT || 3001;
+
+server.listen(PORT, () => {
+    console.log("Server running on port", PORT);
 });
